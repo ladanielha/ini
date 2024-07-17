@@ -18,7 +18,7 @@ This is a halalku system built with Laravel.
    git clone https://github.com/ladanielha/ini
 2. Go to reposistory folder  
     ```bash
-    cd Perpus
+    cd ini
 3. Install Composer  
     ```bash
     composer install
