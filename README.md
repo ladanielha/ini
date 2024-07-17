@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Library Admin System
+## Halalku System
 
-This is a library management system built with Laravel.
+This is a halalku system built with Laravel.
 
 ## Installation
 
