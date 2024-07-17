@@ -1,0 +1,6 @@
+card-image {
+    height: 150px;
+    /* Set the desired height for your images */
+    object-fit: cover;
+    /* Adjust the image aspect ratio to cover the fixed height */
+    width: 100%;}
