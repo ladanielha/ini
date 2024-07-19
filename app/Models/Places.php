@@ -6,7 +6,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Places extends Model
 {
@@ -17,20 +16,20 @@ class Places extends Model
 
     protected $fillable = [
         'wisata_id',
-        'namatempat',
+        'namatempat', 
         'jeniswisata',
-        'alamat',
-        'harga',
-        'jambuka',
+        'alamat', 
+        'harga', 
+        'jambuka', 
         'jamtutup',
-        'desc',
-        'gambar',
-        'kota_id',
+        'desc' ,
+        'gambar' ,
+        'namakota',
         'link'
     ];
 
     protected $primaryKey = 'wisata_id';
-
+    
     protected $casts = [
         'created_at' => 'datetime',
     ];
@@ -44,13 +43,7 @@ class Places extends Model
     protected function gambar(): Attribute
     {
         return Attribute::make(
-            get: fn($value) => url('uploads/' . $value),
+            get: fn ($value) => url('uploads/'.$value),
         );
     }
-    public function city(): BelongsTo
-    {
-        return $this->belongsTo(Kota::class);
-    }
-
-
 }

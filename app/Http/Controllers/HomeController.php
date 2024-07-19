@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $makanan = new MakananCollection(Makanan::paginate(300));
         $places = new PlacesCollection(Places::orderBy('wisata_id', 'desc')->paginate(3));
-        $kotas = new KotaCollection(Kota::orderBy('id', 'desc')->paginate(6));
+        $kotas = new KotaCollection(Kota::orderBy('kota_id', 'desc')->paginate(6));
         $caroseldb = Caroseldb::all();
         return Inertia::render('Client/Home',[ 
             'places'=> $places,

@@ -3,12 +3,12 @@ import React from 'react';
 
 function CityPlaceCard({ city }) {
 
-    console.log(city)
     return city.map((data, i) => {
+        // console.log(city)
         return (<div key={i}>
             <div className="card w-full card-compact lg:w-96 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg" style={{ backgroundColor: '#f0f0f0', height: '100%' }}>
                 <Link
-                    href={route('daftarwisata.kota', { namakota: data.id })}
+                    href={route('daftarwisata.kota', { namakota: data.namakota })}
                     method="get"
                 >
                     <figure>

@@ -56,8 +56,6 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'raja_ongkir_api' => env('RAJAONGKIR_API_KEY', ''),
-
     'asset_url' => env('ASSET_URL'),
 
     /*

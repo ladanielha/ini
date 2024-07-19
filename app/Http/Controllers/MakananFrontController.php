@@ -21,7 +21,8 @@ class MakananFrontController extends Controller
     {
         //dd($request);
         $kota = $request;
-        $foods = Makanan::where('kota_id', $request)->paginate(100);
+        $foods = Makanan::where('namakota', $request)->paginate(100);
+        $food =  new MakananCollection(Makanan::where('namakota', $request)->paginate(9));
         return Inertia::render('Client/Makanan', [
             'foods' => $foods,
             'kota' => $kota
