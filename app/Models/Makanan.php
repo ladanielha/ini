@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Makanan extends Model
 {
@@ -19,7 +18,7 @@ class Makanan extends Model
         'store_id',
         'namamakanan',
         'jenismakanan',
-        'kota_id',
+        'namakota',
         'harga',
         'desc',
         'gambar',
@@ -47,10 +46,5 @@ class Makanan extends Model
         return Attribute::make(
             get: fn ($value) => url('uploads/' . $value),
         );
-    }
-
-    public function city(): BelongsTo
-    {
-        return $this->belongsTo(Kota::class);
     }
 }

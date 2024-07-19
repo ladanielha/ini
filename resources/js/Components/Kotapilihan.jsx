@@ -30,11 +30,11 @@ const isCitycard = (city) => {
     };
 
     return city.kota.map((data, i) => {
-        // console.log(city)
+        //console.log(city)
         return (
             
             <div className="relative" key={i}>
-                <Link href={route('daftarwisata.kota', { namakota: data.id })} method="get">
+                <Link href={route('daftarwisata.kota', { namakota: data.namakota })} method="get">
                 
                 <img className="card-image rounded-xl" src={data.gambar} alt="WisataCirebon" style={{
                     height: "12em", width: "100%"

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('harga');
             $table->string('desc');
             $table->string('gambar');
-            $table->foreignId('kota_id')->reference('kota')->onUpdate()->cascadeOnDelete();   
+            $table->string('kota');     
             $table->string('sertifikat');
             $table->timestamps();
         });

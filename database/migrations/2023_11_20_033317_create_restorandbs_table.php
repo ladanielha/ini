@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('jambuka');
             $table->integer('jamtutup');
             $table->string('alamat');
-            $table->foreignId('kota_id')->reference('kota')->onUpdate()->cascadeOnDelete();
+            $table->string('kota');
             $table->string('link');
             $table->timestamps();
         });
